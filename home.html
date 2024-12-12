@@ -1,0 +1,414 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donate</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Additional CSS for Mobile Responsiveness and Improvements */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #06C167;
+            color: white;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+        }
+
+        .nav-bar ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .banner a {
+            background-color: #06C167;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .banner a:hover {
+            background-color: #04a455;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content h2,
+        .content h3 {
+            margin: 0;
+        }
+
+        .content p {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .photo .heading {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .deli {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .footer div {
+            max-width: 300px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer .social img,
+        .footer .social .fa {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-bar ul {
+                display: none;
+                flex-direction: column;
+                background-color: #06C167;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                padding: 10px 0;
+            }
+
+            .nav-bar ul.active {
+                display: flex;
+            }
+
+            .nav-bar a {
+                padding: 10px;
+                text-align: center;
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Food <b style="color: #ffffff;">Donate</b></div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.php">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <a href="fooddonateform.php">Donate Food</a>
+    </section>
+
+    <div class="content">
+        <h2>Love Food</h2>
+        <h3>Hate Wasting</h3>
+        <p>
+            “Cutting food waste is a delicious way of saving money, helping to feed the world, and protecting the planet.”
+        </p>
+    </div>
+
+    <div class="photo">
+        <p class="heading">Our Works</p>
+        <div class="wrapper">
+            <div class="box"><img src="img/p1.jpeg" alt="Project 1"></div>
+            <div class="box"><img src="img/p4.jpeg" alt="Project 2"></div>
+            <div class="box"><img src="img/p3.jpeg" alt="Project 3"></div>
+        </div>
+    </div>
+
+    <div class="deli">
+        <p class="heading">Door Pickup</p>
+        <p class="para">"Your donation will be immediately collected and sent to needy people."</p>
+        <img src="img/delivery.gif" alt="Delivery Animation">
+    </div>
+
+    <footer class="footer">
+        <div>
+            <p><span>About Us</span></p>
+            <p>The basic concept of this project is to collect excess/leftover food from donors such as hotels, restaurants, marriage halls, etc., and distribute it to needy people.</p>
+        </div>
+        <div>
+            <p><span>Contact</span></p>
+            <p>Phone: 9908552005</p>
+            <p>Email: <a href="mailto:fooddonate@gmail.com">fooddonate@gmail.com</a></p>
+        </div>
+        <div>
+            <h2>Food <span>Donate</span></h2>
+            <p class="menu">
+                <a href="home.html">Home</a> |
+                <a href="about.html">About</a> |
+                <a href="profile.php">Profile</a> |
+                <a href="contact.html">Contact</a>
+            </p>
+            <p>&copy; 2024 Food Donate</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector(".hamburger").addEventListener("click", function () {
+            document.querySelector(".nav-bar ul").classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donate</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .div-container {
+            background-color: #6de683;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+           
+            max-width: 1400px;
+            text-align: center;
+        }
+        
+        .div-container p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+        
+        .div-container h2 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #2d3e50;
+            margin-bottom: 10px;
+        }
+        
+        .div-container a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .div-container a:hover {
+            color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Food <b style="color: #06C167;">Donate</b></div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="about.html" >About</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+                <li><a href="profile.php" >Profile</a></li>
+                 
+            </ul>
+        </nav>
+    </header>
+    <script>
+        hamburger=document.querySelector(".hamburger");
+        hamburger.onclick =function(){
+            navBar=document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+    <section class="banner">
+        <a href="fooddonateform.php" style="background-color: rgb(29, 32, 30); color: rgb(240, 235, 235);  border-radius: 12px ;">DONATE FOOD</a>
+    </section>
+    <div class="div-container">
+        
+        <p>Cutting food waste is a delicious way of saving money, helping to feed the world and protect the planet.</p>
+    </div>
+    
+    <div class="photo">
+        <br>
+        <p class="heading">Our Works</p>
+        <br>
+        <p style="font-size: 28px; text-align: center;">"Look what we can do together."</p>
+       <br>
+        <div class="wrapper">
+          <div class="box"><img src="img/p1.jpeg" alt=""></div>
+          <div class="box"><img src="img/p4.jpeg" alt=""></div>
+          <div class="box"><img src="img/p3.jpeg" alt=""></div>
+        </div>
+      
+        <br>
+        
+    
+     
+        
+    </div>
+    <div class="deli" style="display: grid;" >
+      <p class="heading">DOOR PICKUP</p>
+      <br>
+      <p  class="para">"Your donate will be immediately collected and sent to needy people "</p>
+      <img src="img/delivery.gif" alt="" style="margin-left:auto; margin-right: auto;">
+
+    </div>
+    <div class="ser">
+    
+    </div>
+    <footer class="footer">
+        <div class="footer-left col-md-4 col-sm-6">
+          <p class="about">
+            <span> About us</span>The basic concept of this project  Food Waste Management is to collect the excess/leftover  food from donors such as hotels, restaurants, marriage halls , etc and distribute to  the  needy people .
+     </p>
+        
+        </div>
+        <div class="footer-center col-md-4 col-sm-6">
+          <div>
+            <p><span> Contact</span> </p>
+            
+          </div>
+          <div>
+        
+            <p>+91 9908552005</p>
+            
+          </div>
+          <div>
+           
+            <p><a href="#"> Fooddonate@gmail.com</a></p>
+          </div>
+          
+          <div class="sociallist">
+            <ul class="social">
+            <li><a href=" "><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+            <li><a  href=" "><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+            <li><a  href=" "><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+            <li><a  href=" "><i class="fa fa-whatsapp" style="font-size:50px;color: black;"></i></a></li>
+           </ul>
+          </div>
+        </div>
+        <div class="footer-right col-md-4 col-sm-6">
+          <h2> Food<span> Donate</span></h2>
+          
+          <p class="menu">
+            <a href="#"> Home</a> |
+            <a href="about.html"> About</a> |
+            <a href="profile.php"> Profile</a> |
+            <a href="contact.html"> Contact</a>
+          </p>
+          <p class="name"> Food Donate 2024</p>
+        </div>
+      </footer>
+
+    
+</body>
+</html>
