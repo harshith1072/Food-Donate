@@ -1,0 +1,228 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.cover {
+    width: 100%;
+    height: 500px;
+    background: url('profilecover2.jpg') no-repeat center center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    padding-top: 8rem;
+}
+
+.profilebox {
+    text-align: center;
+    width: 700px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    color: #333;
+    font-size: 18px;
+}
+
+.info {
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    display: inline-block;
+    background-color: #06C167;
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #039f4f;
+}
+
+.headingline {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline 5px;
+    text-decoration-color: #06C167;
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.card {
+    width: 280px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #06C167;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.card p strong {
+    color: #06C167;
+}
+
+/* For phone */
+@media (max-width: 767px) {
+    .cover {
+        background: url('profilecover1.jpg') no-repeat center center;
+        background-size: cover;
+        padding-top: 6rem;
+    }
+
+    .profilebox {
+        width: 90%;
+        font-size: 16px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .card a {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--navcolor); /* Updated header background */
+    padding: 10px 20px;
+    color: #333; /* Updated text color */
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd; /* Optional border for better separation */
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #06C167; /* Optional: Logo color */
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333; /* Updated link text color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #06C167; /* Updated hover effect */
+}
+
+header .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+header .hamburger .line {
+    width: 30px;
+    height: 4px;
+    background-color: #333; /* Updated hamburger menu color */
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 18px;
+    }
+}

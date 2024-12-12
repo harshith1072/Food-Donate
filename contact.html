@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+         
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background: #333;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #06C167;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #06C167;
+        }
+
+        .heading {
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .contact-form, .contact-info, .help {
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .contact-form form input,
+        .contact-form form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form form input[type="submit"] {
+            background: #06C167;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background 0.3s;
+        }
+
+        .contact-form form input[type="submit"]:hover {
+            background: #04a155;
+        }
+
+        .help button {
+            background: #06C167;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .help button:hover {
+            background: #04a155;
+        }
+
+        .help .panel {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+            color: #333;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Food <b>Donate</b></div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="profile.php">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <p class="heading">Contact Us</p>
+
+    <div class="container">
+        <div class="contact-form">
+            <form action="feedback.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+
+                <input type="submit" value="Send">
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <p><b>Email:</b> fooddonate@gmail.com</p>
+            <p><b>Phone:</b> 9908093864</p>
+            <p><b>Address:</b> IIITDMJ</p>
+        </div>
+
+        <div class="help">
+            <button onclick="togglePanel(this)">How to donate food?</button>
+            <div class="panel">
+                <p>1) Click on <a href="fooddonateform.php">donate</a> on the home page.</p>
+                <p>2) Fill in the details.</p>
+                <p>3) Click on submit.</p>
+            </div>
+
+            <button onclick="togglePanel(this)">How will my donation be used?</button>
+            <div class="panel">
+                <p>Your donation will be used to support our mission and various programs. For more information, visit our website or contact us.</p>
+            </div>
+
+            <button onclick="togglePanel(this)">What should I do if my food donation is near or past its expiration date?</button>
+            <div class="panel">
+                <p>We cannot accept food that is near or past its expiration date for safety reasons. Please check expiration dates before donating or contact us for guidance.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePanel(button) {
+            const panel = button.nextElementSibling;
+            panel.style.display = panel.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
